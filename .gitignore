@@ -1,0 +1,7 @@
+
+*.un~
+*.cpp~
+*.exe
+*.bat
+*.swp
+.main.cpp.swp
