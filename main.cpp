@@ -2,7 +2,7 @@
 #include <cstdio>
 #include <memory>
 
-template<typedef T> class Stack { 
+template<typename T> class Stack { 
 	T* data; 
 	size_t index = 0; 
 	size_t size = 0; 
@@ -17,7 +17,7 @@ template<typedef T> class Stack {
 		return data[index--]; 
 	} 
 
-} 
+};
 int main(int argc, char* argv[]){ 
  
 
