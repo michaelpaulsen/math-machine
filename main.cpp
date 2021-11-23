@@ -16,6 +16,18 @@ template<typename T> class Stack {
 	T pop(){
 		return data[index--]; 
 	} 
+	T operator[](int x) const { 
+		return data[x]; 
+		/**
+		 * this is a work around for jumping 
+		 * a true FILO stack wouldn't alow you to
+		 * index. 
+		 * However I am just implementing a stack
+		 * based state machine not a whole 
+		 * cpu so this is fine; 
+		 * */
+	} 	
+
 
 };
 int main(int argc, char* argv[]){ 
