@@ -1,0 +1,21 @@
+6144 + (6144 - 5461) 
+
+registers
+reg_t A
+reg_t B
+reg_t C [mostlikly not going to be implemented]  
+reg_t D [mostlikly not going to be implemented] 
+bool  OVER[/carry; mostlikly not going to be implemented] 
+bool  ZERO [can be used for comp instead of returning to the stack; mostlikly not going to be implemented]  
+
+
+push (val      )     [puts val at instruc pointer then inc instruc pointer]  
+pop  (reg      )     [puts val at instruc pointer into reg then dec instruc pointer]
+add  (reg1 reg2)     [adds reg1 to reg2 (pushes value to the stack)]
+sub  (reg1 reg2)     [subtracts reg1 from reg2 (pushes value to the stack)]
+mult (reg1 reg2)     [adds reg1 to its self reg2 times (pushes value to stack)]
+div  (reg1 reg2)     [subtracts reg1 from reg2 until equiv(reg1, 0) = true (pushes the value to the stack)]
+comp (regx int )     [checkes if the register is the same as the pased in int (pushes true or false to the stack [1|0]) ]
+jmp  ( int )         [ subtracts int from instruct pointer continues from there] 
+jeq  (reg int1 int2) [if comp(reg int1) is one then jmp(int2)] 
+jne  (reg int1 int2) [opisite of above]
